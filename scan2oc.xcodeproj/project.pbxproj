@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA6FEBCB85D7FA0CC6BCBD35 /* Pods_scan2oc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5036678042EABFB18F7687A8 /* Pods_scan2oc.framework */; };
 		C392904D1F00173100A4071D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392904C1F00173100A4071D /* AppDelegate.swift */; };
 		C392904F1F00173100A4071D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392904E1F00173100A4071D /* ViewController.swift */; };
 		C39290521F00173100A4071D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39290501F00173100A4071D /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21B2A668C1BE3A3CB83C3B4B /* Pods-scan2oc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scan2oc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-scan2oc/Pods-scan2oc.debug.xcconfig"; sourceTree = "<group>"; };
+		5036678042EABFB18F7687A8 /* Pods_scan2oc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scan2oc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B326F9D5923CE50BFA107830 /* Pods-scan2oc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scan2oc.release.xcconfig"; path = "Pods/Target Support Files/Pods-scan2oc/Pods-scan2oc.release.xcconfig"; sourceTree = "<group>"; };
 		C39290491F00173100A4071D /* scan2oc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scan2oc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C392904C1F00173100A4071D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C392904E1F00173100A4071D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA6FEBCB85D7FA0CC6BCBD35 /* Pods_scan2oc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		318606278F5049FF43E17909 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5036678042EABFB18F7687A8 /* Pods_scan2oc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AC83718400ED27B7CCB83ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21B2A668C1BE3A3CB83C3B4B /* Pods-scan2oc.debug.xcconfig */,
+				B326F9D5923CE50BFA107830 /* Pods-scan2oc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C39290401F00173100A4071D = {
 			isa = PBXGroup;
 			children = (
 				C392904B1F00173100A4071D /* scan2oc */,
 				C392904A1F00173100A4071D /* Products */,
+				9AC83718400ED27B7CCB83ED /* Pods */,
+				318606278F5049FF43E17909 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C392905B1F00173100A4071D /* Build configuration list for PBXNativeTarget "scan2oc" */;
 			buildPhases = (
+				3E7AE879034184370CCFABDD /* [CP] Check Pods Manifest.lock */,
 				C39290451F00173100A4071D /* Sources */,
 				C39290461F00173100A4071D /* Frameworks */,
 				C39290471F00173100A4071D /* Resources */,
+				2553BF05214492AAAEFC774C /* [CP] Embed Pods Frameworks */,
+				8CAAE6D2AD95CD92FCDFAE60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2553BF05214492AAAEFC774C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-scan2oc/Pods-scan2oc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E7AE879034184370CCFABDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8CAAE6D2AD95CD92FCDFAE60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-scan2oc/Pods-scan2oc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C39290451F00173100A4071D /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		C392905C1F00173100A4071D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21B2A668C1BE3A3CB83C3B4B /* Pods-scan2oc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6H4AW7WN7R;
@@ -274,6 +350,7 @@
 		};
 		C392905D1F00173100A4071D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B326F9D5923CE50BFA107830 /* Pods-scan2oc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6H4AW7WN7R;
